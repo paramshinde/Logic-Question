@@ -1,12 +1,10 @@
 #Find the HCF (Highest Common Factor) of two given numbers.
 a=45
 b=30
-limit=max(a,b)
-n=1
+limit=min(a,b)
 HCF=0
-while n<=limit:
-    if a%n==0 and b%n==0:
-        HCF=n
-        #break
-    n=n+1
-print(HCF)
+while limit>0:
+    if a%limit==0 and b%limit==0:
+        print(limit)
+        break
+    limit=limit-1
